@@ -84,7 +84,7 @@ h2 {
 .form button {
   cursor: pointer;
   background-color: #3498db;
-  border: 2px solid #3498db;
+  border: none;
   border-radius: 4px;
   display: block;
   font-size: 16px;
@@ -92,4 +92,9 @@ h2 {
   padding: 10px;
   margin-top: 20px;
   width: 100%;
+  background-image: linear-gradient(to right, #3498db, #63a3ce, #ffffff);
+}
+
+.form button:hover {
+  background-image: linear-gradient(to left, #3498db, #63a3ce, #ffffff);
 }

@@ -21,7 +21,10 @@ function checkRequired(inputArr) {
     if (input.value.trim() === "") {
       showError(input, `${getFieldName(input)} is required.`);
     } else {
-      showSuccess(input);
+      checkLength(username, 3, 15);
+      checkLength(password, 6, 25);
+      checkEmail(email);
+      checkPasswordMatch(password, confirmPassword);
     }
   });
 }
@@ -66,8 +69,4 @@ function checkLength(input, min, max) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkRequired([username, email, password, confirmPassword]);
-  checkLength(username, 3, 15);
-  checkLength(password, 6, 25);
-  checkEmail(email);
-  checkPasswordMatch(password, confirmPassword);
 });
